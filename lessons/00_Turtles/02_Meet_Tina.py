@@ -52,4 +52,3 @@ turtle.exitonclick()                    # Close the window when we click on it
 
 # Now you can try writing your own programs. Open
 # the next file 03_Turtle_Tricks.py
-
