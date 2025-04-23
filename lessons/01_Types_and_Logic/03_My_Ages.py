@@ -44,7 +44,9 @@ age = simpledialog.askinteger("", 'How old are you?')
 #20-64: (Adult)
 #65+: (Senior)
 # Show the message to the user
-if age<3:
+if age<0:
+    messagebox.showinfo("","You are not born.")
+elif age<3:
     messagebox.showinfo("","You are a baby.")
 elif age<6:
     messagebox.showinfo("","You are a toddler.") 
