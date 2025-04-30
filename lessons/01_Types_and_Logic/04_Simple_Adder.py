@@ -22,7 +22,7 @@ from tkinter import messagebox, simpledialog, Tk # import requiredes
 window = Tk()     # Create a window object
 # Hide the window, hint: use the withdraw method
 window.withdraw()
-# Ask the user for the first number   
+# Ask the user for the first number   r
 number1  = simpledialog.askinteger("", 'enter a number') 
 # Ask the user for the second number
 number2= simpledialog.askinteger("", 'enter another number')
