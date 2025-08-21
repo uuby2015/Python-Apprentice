@@ -40,10 +40,11 @@ def add_definition(db, key, value):
     """
 
     # Check the limit
-
+    if len(db)>=5:
+        print("there can only be 5 definitions in the database")
+    else:
+       db[key]=value
     # Set the item in the database
-
-    pass
 
 
 def delete_definition(db, key):
@@ -59,7 +60,7 @@ def delete_definition(db, key):
     """
 
     # Delete the item from db if it is present
-
+delete_definition
     pass
 
 
