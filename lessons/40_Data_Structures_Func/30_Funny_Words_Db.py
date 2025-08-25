@@ -58,37 +58,24 @@ def delete_definition(db, key):
     Returns:
         None
     """
-
-    # Delete the item from db if it is present
-delete_definition
-    pass
-
-
-def is_funny(definition):
-    """
-    Check if the definition is funny, which means it contains one of the words:
-
+def is_funny(definition): 
+    if ('fun') in definition
+        
+    """    Check if the definition is funny, which means it contains one of the words:
         'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
-
     Args:
         definition (str): The definition to check.
-
     Returns:
         bool: True if the definition contains any of the funny words, False otherwise.
     """
-    
     # Return True if the definition contains any of the funny words, False otherwise
-
     return False
-
 def update_listbox(db):
     """
     Update the listbox with the current definitions in the database.1
-
     Returns:
         list of str: A list of strings containing the definitions to be displayed in the listbox.
     """
-
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
     l = [
@@ -103,7 +90,7 @@ def update_listbox(db):
 
     return l
 
-################################################################
+###############################################################
 
 # Function to add a definition
 
