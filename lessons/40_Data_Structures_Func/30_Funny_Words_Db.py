@@ -59,9 +59,9 @@ def delete_definition(db, key):
         None
     """
 def is_funny(definition): 
-    if ('fun') in definition
+    if ('fun') in definition:
         
-    """    Check if the definition is funny, which means it contains one of the words:
+        """    Check if the definition is funny, which means it contains one of the words:
         'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
     Args:
         definition (str): The definition to check.
