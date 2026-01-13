@@ -4,8 +4,7 @@ from guizero import App, Box, Text, TextBox, PushButton, ListBox, error
 
 This program provides a graphical user interface (GUI) for managing a dictionary
 of funny words and their definitions. Users can add new definitions, delete
-existing definitions, and view the list of definitions in a listbox. 
-
+existing definitions, and
 The module uses the guizero library to create the GUI components and handle user
 interactions.  It defines several functions for adding and deleting definitions,
 as well as checking if a definition is funny. The definitions are stored in a
@@ -58,7 +57,7 @@ def delete_definition(db, key):
     Returns:
         None
     """
-    db.remove('key')
+    db.remove(key)
 def is_funny(definition): 
     if ('fun') in definition:
       
@@ -69,11 +68,16 @@ def is_funny(definition):
     Returns:
         bool: True if the definition contains any of the funny words, False otherwise.
     """
-l=list('fun, funny, hilarious, amusing, pants, spleen')
-
+    l=list('fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen')
+    
+    if l in definition:
+        return True
+    else: 
+        return False
     # Return True if the definition contains any of the funny words, False otherwise
-    return False
+
 def update_listbox(db):
+    
     """
     Update the listbox with the current definitions in the database.1
     Returns:
@@ -158,11 +162,6 @@ app.when_key_pressed = handle_enter
 _update_listbox(db) # Initial update of listbox
 
 app.display()
-
-
-
-
-
 
 
 
