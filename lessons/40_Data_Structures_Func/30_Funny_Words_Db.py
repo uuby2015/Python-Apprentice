@@ -7,7 +7,7 @@ of funny words and their definitions. Users can add new definitions, delete
 existing definitions, and
 The module uses the guizero library to create the GUI components and handle user
 interactions.  It defines several functions for adding and deleting definitions,
-as well as checking if a definition is funny. The definitions are stored in a
+as well as checking if a definition is funny. The definitions are stored in a.
 global dictionary called 'db'. To use the application, run the script and a
 window will appear with input fields for entering a word and its definition.
 Clicking the 'Add' button will add the definition to the dictionary and update
@@ -22,13 +22,14 @@ an error message will be displayed and new definitions will not be added.
 
 # Implement the functions below
 
-
 def add_definition(db, key, value):
     """
     Add a new definition to the database.
 
     Parameters:
     - db (dict): The database to add the definition to.
+
+    +.....................
     - key (str): The key for the new definition.
     - value (str): The value for the new definition.
 
@@ -44,7 +45,7 @@ def add_definition(db, key, value):
     else:
        db[key]=value
     # Set the item in the database
-
+    db={key : value}
 
 def delete_definition(db, key):
     """
@@ -77,6 +78,7 @@ def is_funny(definition):
     # Return True if the definition contains any of the funny words, False otherwise
 
 def update_listbox(db):
+
     
     """
     Update the listbox with the current definitions in the database.1
@@ -162,9 +164,6 @@ app.when_key_pressed = handle_enter
 _update_listbox(db) # Initial update of listbox
 
 app.display()
-
-
-
 
 
 
