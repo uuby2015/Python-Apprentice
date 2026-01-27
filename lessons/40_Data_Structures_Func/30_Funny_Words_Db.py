@@ -45,7 +45,6 @@ def add_definition(db, key, value):
     else:
        db[key]=value
     # Set the item in the database
-    db={key : value}
 
 def delete_definition(db, key):
     """
@@ -60,9 +59,8 @@ def delete_definition(db, key):
     """
     db.remove(key)
 def is_funny(definition): 
-    if ('fun') in definition:
       
-        """    Check if the definition is funny, which means it contains one of the words:
+    """    Check if the definition is funny, which means it contains one of the words:
         'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
     Args:
         definition (str): The definition to check.
@@ -79,7 +77,6 @@ def is_funny(definition):
 
 def update_listbox(db):
 
-    
     """
     Update the listbox with the current definitions in the database.1
     Returns:
@@ -87,11 +84,10 @@ def update_listbox(db):
     """
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
-    l = [
-        "Item 1: Fake Definition 1",
-        "Item 2: Fake Definition 2",
-        "Item 3: fake Definition 3"
-    ]
+    l = []
+    for key, value in db.items():
+        s = f"{key}: {value}"
+        l.append(s)
 
     # Add each definition to a string
     # iterate over the dict's key-value pairs and turn them into
@@ -99,7 +95,7 @@ def update_listbox(db):
 
     return l
 
-##################################################################
+#####################################################################
 
 # Function to add a definition
 
@@ -110,6 +106,7 @@ def _add_definition():
 
     if word and definition:
         if is_funny(definition):
+            print(definition)
             definition = "😂 " + definition + " 🤡"
         add_definition(db, word, definition)
         _update_listbox(db)
