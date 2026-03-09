@@ -1,7 +1,7 @@
-#imports
+#mports
 from guizero import App, Box, PushButton, Text, info
 
-X_MARK = "X"
+X_MARK = "X" 
 O_MARK = "O"
 
 # Implement check_row() and check_win() to allow the game to check if a player has won
@@ -100,8 +100,7 @@ class TicTacToe:
                 for button in row:
                     button.disable()
         elif self.turn_n == 9:
-            self.message.value = "It's a draw!"
-            info("Tic-tac-toe","It's a draw!")
+            self.message.value ="It's a draw!")
 
 ttt = TicTacToe(check_win)
 ttt.start()
