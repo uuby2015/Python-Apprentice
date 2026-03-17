@@ -100,7 +100,7 @@ class TicTacToe:
                 for button in row:
                     button.disable()
         elif self.turn_n == 9:
-            self.message.value ="It's a draw!")
+            self.message.value ="It's a draw!"
 
 ttt = TicTacToe(check_win)
 ttt.start()
@@ -108,6 +108,7 @@ ttt.start()
 
 
 
+ 
 
 
 
