@@ -6,17 +6,16 @@ O_MARK = "O"
 
 # Implement check_row() and check_win() to allow the game to check if a player has won
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
-
+l=[1, 2, 3]
 def check_row(l):
-    """Check if a player won on a row
-    Args:
-        l: a 3 element iterable
-        
-    Returns:
-        The winner's token ( x or o ) if there is one, otherwise None
-        """
+    if l[0] == l[1] == l[2] == X_MARK:
+        return X_MARK
+    elif l[0] == l[1] == l[2] == O_MARK:
+        return O_MARK
+    else:
+        return None
 
-    return None
+
 
 def check_win(board):
     """Check if a player has won on a board
@@ -26,8 +25,35 @@ def check_win(board):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
     """
-
-    return None
+    winner=check_row(board[0])
+    if winner != None:
+        return winner
+    winner=check_row(board[1])
+    if winner != None:
+        return winner
+    winner=check_row(board[2])
+    if winner != None:
+        return winner
+    winner=check_row( [board[0][1], [1][1], [2][2]] )
+    if winner != None:
+        return winner
+    winner=check_row(board [[0][2], [1][1], [2][1]] )
+    if winner != None:
+        return winner
+    # if board [0][0] == board [0][1] == board [0][2] == X_MARK:
+    #     return X_MARK
+    # elif board [0][0] == board [0][1] == board [0][2] == O_MARK:
+    #     return O_MARK
+    # elif board [1][0] == board [1][1] == board [1][2] == X_MARK:
+    #     return X_MARK
+    # elif board [1][0] == board [1][1] == board [1][2] == O_MARK:
+    #     return O_MARK
+    # elif board [2][0] == board [2][1] == board [2][2] == X_MARK:
+    #     return X_MARK
+    # elif board [2][0] == board [2][1] == board [2][2] == O_MARK:
+    #     return O_MARK
+    # else:
+    #     return None
 
 # The following code is the main part of the program. It creates a GUI for the
 # game and handles the game logic. Implement the functions above first, then
@@ -104,14 +130,6 @@ class TicTacToe:
 
 ttt = TicTacToe(check_win)
 ttt.start()
-
-
-
-
- 
-
-
-
 
 
 
