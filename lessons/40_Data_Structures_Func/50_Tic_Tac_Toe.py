@@ -25,25 +25,24 @@ def check_win(board):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
     """
-    winner=check_row(board[0])
+    board=[
+        [1,2,3]
+        [4,5,6]
+        [7,8,9]
+    ]
+    first_row=board[0]
     if winner != None:
         return winner
-    winner=check_row(board[1])
+    winner=check_row( [board[0][0], board[1][1], board[2][2]] )
     if winner != None:
         return winner
-    winner=check_row(board[2])
+    winner=check_row( [board[0][2], board[1][1], board[2][0]] )
+    print(winner)
     if winner != None:
         return winner
-    winner=check_row( [board[0][0], [1][1], [2][2]] )
-    if winner != None:
-        return winner
-    winner=check_row(board [[0][2], [1][1], [2][1]] )
-    if winner != None:
-        return winner
-    else:
-        return None
     flip=list(zip(*board))
     flip[0]
+
     if winner != None:
         return winner
     flip[1]
@@ -51,7 +50,10 @@ def check_win(board):
         return winner
     flip[2]
     if winner != None:
-        print winner
+        return winner
+    else:
+        return None
+    
     # if board [0][0] == board [0][1] == board [0][2] == X_MARK:
     #     return X_MARK
     # elif board [0][0] == board [0][1] == board [0][2] == O_MARK:
