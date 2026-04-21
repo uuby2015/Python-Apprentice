@@ -26,9 +26,9 @@ def check_win(board):
         The winner's token ( x or o ) if there is one, otherwise None
     """
     
-    winner=check_row board[0]
-    if winner != None:
-        return winner
+    winner=check_row board[0]:
+        if winner != None:
+            return winner
     winner=check_row( [board[0][0], board[1][1], board[2][2]] )
     if winner != None:
         return winner
