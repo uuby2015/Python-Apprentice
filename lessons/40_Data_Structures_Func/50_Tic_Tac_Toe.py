@@ -23,11 +23,11 @@ def check_win(board):
         board: a 3x3 2D array
     
     Returns:
-        The winner's token ( x or o ) if there is one, otherwise None
+      board  The winner's token ( x or o ) if there is one, otherwise None
     """
     
-    winner=check_row board[0]:
-        if winner != None:
+    winner=check_row [0]
+    if winner != None:
             return winner
     winner=check_row( [board[0][0], board[1][1], board[2][2]] )
     if winner != None:
@@ -140,14 +140,6 @@ class TicTacToe:
 
 ttt = TicTacToe(check_win)
 ttt.start()
-
-
-
-
-
-
-
-
 
 
 
