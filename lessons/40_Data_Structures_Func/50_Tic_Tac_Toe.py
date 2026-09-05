@@ -11,9 +11,11 @@ def check_row(l):
     if l[0] == l[1] == l[2] == X_MARK:
         return X_MARK
     elif l[0] == l[1] == l[2] == O_MARK:
-        return O_MARK
+        return O_MARK 
     else:
-        return None
+        return None 
+
+
 
 
 
@@ -31,6 +33,7 @@ def check_win(board):
     if winner != None:
         return winner
     winner=check_row (board[1])
+  
     if winner ==X_MARK or winner == O_MARK:
         return winner
     winner=check_row(board[2])
@@ -38,19 +41,26 @@ def check_win(board):
     if winner ==X_MARK or winner == O_MARK:
         return winner
     flip=list(zip(*board))
-    flip[0]
 
+    winner=check_row(flip[0])
+    if winner != None:
+            return winner
+    winner=check_row(flip[1])
     if winner != None:
         return winner
-    flip[1]
-    if winner == X_MARK or winner == O_MARK:
+    winner=check_row(flip[2])
+    if winner != None:
         return winner
-    flip[2]
-    if winner == X_MARK or winner == O_MARK:
-        return winner
-    else:
-        return None
+
     
+
+    if l(0)==l(1)==l(2)==X_MARK:
+        return X_MARK
+    if l(2)==l(1)==l(0)==X_MARK:
+        return X_MARK
+
+    winner=check_row([board(i)(i) for i in range(3)])
+    winner=check_row([board(i)(2-i) for i in range(3)])
     # if board [0][0] == board [0][1] == board [0][2] == X_MARK:
     #     return X_MARK
     # elif board [0][0] == board [0][1] == board [0][2] == O_MARK:
