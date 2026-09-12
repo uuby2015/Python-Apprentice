@@ -52,15 +52,15 @@ def check_win(board):
     if winner != None:
         return winner
 
-    
 
-    if l(0)==l(1)==l(2)==X_MARK:
-        return X_MARK
-    if l(2)==l(1)==l(0)==X_MARK:
-        return X_MARK
 
-    winner=check_row([board(i)(i) for i in range(3)])
-    winner=check_row([board(i)(2-i) for i in range(3)])
+    winner=check_row([board[i][i] for i in range(3)])
+    if winner != None:
+        return winner
+
+    winner=check_row([board[i][2-i] for i in range(3)])
+    if winner != None:
+        return winner
     # if board [0][0] == board [0][1] == board [0][2] == X_MARK:
     #     return X_MARK
     # elif board [0][0] == board [0][1] == board [0][2] == O_MARK:
