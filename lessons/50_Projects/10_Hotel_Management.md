@@ -48,6 +48,13 @@ i could first tell the them the option for the menu. i person who is using this 
 
 
 
+while true:
+"ask the user what they want to do"
+"depending on their choice:"
+"'if check in:"
+"check_in()"
+"if check out:"
+"check_out()"
 
 
 
